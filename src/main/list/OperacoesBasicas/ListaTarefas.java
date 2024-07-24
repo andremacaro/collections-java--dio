@@ -39,8 +39,8 @@ public class ListaTarefas {
         System.out.println("Numero de tarefas: " + listaTarefas.obterNumeroTotalTarefas());
 
         listaTarefas.adicionarTarefa("Lavar a louça");
-        listaTarefas.adicionarTarefa("Fazer café");
         listaTarefas.adicionarTarefa("Lavar a louça");
+        listaTarefas.adicionarTarefa("Fazer café");
         System.out.println("Numero de tarefas: " + listaTarefas.obterNumeroTotalTarefas());
 
         listaTarefas.removerTarefa("Lavar a louça");
