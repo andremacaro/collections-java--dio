@@ -3,10 +3,10 @@ package main.list.Pesquisa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CatalagoLivros {
+public class CatalogoLivros {
     private List<Livro> catalogo;
 
-    public CatalagoLivros() {
+    public CatalogoLivros() {
         this.catalogo = new ArrayList<>();
     }
 
@@ -31,7 +31,7 @@ public class CatalagoLivros {
 
         if(!catalogo.isEmpty()){
             for(Livro l : catalogo){
-                if(l.getAnoPublicacao() >= anoInicial || l.getAnoPublicacao() <= anoFinal){
+                if(l.getAnoPublicacao() >= anoInicial && l.getAnoPublicacao() <= anoFinal){
                     livrosPorIntervalo.add(l);
                 }
             }
@@ -51,4 +51,21 @@ public class CatalagoLivros {
         }
         return livroPorTitulo;
     }
+
+
+    public static void main(String[] args) {
+        CatalogoLivros catalogoLivros = new CatalogoLivros();
+
+        catalogoLivros.adicionarLivro("Livro1", "Autor5", 1999);
+        catalogoLivros.adicionarLivro("Livro1", "Autor1", 1999);
+        catalogoLivros.adicionarLivro("Livro2", "Autor5", 2010);
+        catalogoLivros.adicionarLivro("Livro3", "Autor3", 2001);
+        catalogoLivros.adicionarLivro("Livro4", "Autor4", 1970);
+
+
+        System.out.println(catalogoLivros.pesquisarPorAutor("Autor5"));
+        System.out.println(catalogoLivros.pesquisaPorIntervaloAnos(2001, 2003));
+        System.out.println(catalogoLivros.pesquisarPorTitulo("Livro1"));
+    }
 }
+

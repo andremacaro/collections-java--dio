@@ -1,4 +1,4 @@
 package main.list.Ordenacao;
 
-public class OrdecaoPessoas {
+public class OrdenacaoPessoas {
 }
